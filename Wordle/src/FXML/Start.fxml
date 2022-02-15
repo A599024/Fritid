@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="800.0" prefWidth="800.0" style="-fx-background-color: #252525#252525;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.WordleController">
+   <children>
+      <ImageView fx:id="logoBilde" fitHeight="107.0" fitWidth="376.0" layoutX="248.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="693.0" AnchorPane.leftAnchor="248.0" AnchorPane.rightAnchor="247.38278198242188" AnchorPane.topAnchor="0.0">
+         <image>
+            <Image url="@../FatternLogo.png" />
+         </image></ImageView>
+      <Label fx:id="lb3" layoutX="375.0" layoutY="118.0" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: lightGrey;">
+         <font>
+            <Font size="38.0" />
+         </font></Label>
+      <Label fx:id="lb2" layoutX="307.0" layoutY="118.0" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: lightGrey;" textAlignment="CENTER">
+         <font>
+            <Font size="38.0" />
+         </font>
+      </Label>
+      <Label fx:id="lb4" layoutX="443.0" layoutY="118.0" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: lightGrey;">
+         <font>
+            <Font size="38.0" />
+         </font>
+      </Label>
+      <Label fx:id="lb5" layoutX="511.0" layoutY="118.0" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: lightGrey;">
+         <font>
+            <Font size="38.0" />
+         </font>
+      </Label>
+      <Label fx:id="lb1" layoutX="239.0" layoutY="118.0" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: lightGrey;">
+         <font>
+            <Font name="System Font" size="38.0" />
+         </font>
+      </Label>
+      <Label fx:id="lb8" layoutX="375.0" layoutY="186.0" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: lightGrey;">
+         <font>
+            <Font size="38.0" />
+         </font>
+      </Label>
+      <Label fx:id="lb10" layoutX="511.0" layoutY="186.0" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: lightGrey;">
+         <font>
+            <Font size="38.0" />
+         </font>
+      </Label>
+      <Label fx:id="lb9" layoutX="443.0" layoutY="186.0" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: lightGrey;">
+         <font>
+            <Font size="38.0" />
+         </font>
+      </Label>
+      <Label fx:id="lb6" layoutX="239.0" layoutY="186.0" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: lightGrey;">
+         <font>
+            <Font size="38.0" />
+         </font>
+      </Label>
+      <Label fx:id="lb7" layoutX="307.0" layoutY="186.0" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: lightGrey;">
+         <font>
+            <Font size="38.0" />
+         </font>
+      </Label>
+      <Label fx:id="lb13" layoutX="375.0" layoutY="254.0" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: lightGrey;">
+         <font>
+            <Font size="38.0" />
+         </font>
+      </Label>
+      <Label fx:id="lb15" layoutX="511.0" layoutY="254.0" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: lightGrey;">
+         <font>
+            <Font size="38.0" />
+         </font>
+      </Label>
+      <Label fx:id="lb14" layoutX="443.0" layoutY="254.0" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: lightGrey;">
+         <font>
+            <Font size="38.0" />
+         </font>
+      </Label>
+      <Label fx:id="lb12" layoutX="307.0" layoutY="254.0" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: lightGrey;">
+         <font>
+            <Font size="38.0" />
+         </font>
+      </Label>
+      <Label fx:id="lb11" layoutX="239.0" layoutY="254.0" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: lightGrey;">
+         <font>
+            <Font size="38.0" />
+         </font>
+      </Label>
+      <Label fx:id="lb18" layoutX="375.0" layoutY="322.0" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: lightGrey;">
+         <font>
+            <Font size="38.0" />
+         </font>
+      </Label>
+      <Label fx:id="lb23" layoutX="375.0" layoutY="390.0" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: lightGrey;">
+         <font>
+            <Font size="38.0" />
+         </font>
+      </Label>
+      <Label fx:id="lb19" layoutX="443.0" layoutY="322.0" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: lightGrey;">
+         <font>
+            <Font size="38.0" />
+         </font>
+      </Label>
+      <Label fx:id="lb20" layoutX="511.0" layoutY="322.0" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: lightGrey;">
+         <font>
+            <Font size="38.0" />
+         </font>
+      </Label>
+      <Label fx:id="lb24" layoutX="443.0" layoutY="390.0" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: lightGrey;">
+         <font>
+            <Font size="38.0" />
+         </font>
+      </Label>
+      <Label fx:id="lb17" layoutX="307.0" layoutY="322.0" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: lightGrey;">
+         <font>
+            <Font size="38.0" />
+         </font>
+      </Label>
+      <Label fx:id="lb16" layoutX="239.0" layoutY="322.0" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: lightGrey;">
+         <font>
+            <Font size="38.0" />
+         </font>
+      </Label>
+      <Label fx:id="lb22" layoutX="307.0" layoutY="390.0" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: lightGrey;">
+         <font>
+            <Font size="38.0" />
+         </font>
+      </Label>
+      <Label fx:id="lb21" layoutX="239.0" layoutY="390.0" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: lightGrey;">
+         <font>
+            <Font size="38.0" />
+         </font>
+      </Label>
+      <Label fx:id="lb25" layoutX="511.0" layoutY="390.0" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: lightGrey;">
+         <font>
+            <Font size="38.0" />
+         </font>
+      </Label>
+      <TextField fx:id="userWord" layoutX="264.0" layoutY="479.0" prefHeight="50.0" prefWidth="205.0" promptText="Write a word here!" style="-fx-background-color: #F5793B#F5793B;">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </TextField>
+      <Button fx:id="goButton" layoutX="493.0" layoutY="479.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="55.0" text="GO" textOverrun="CLIP">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Button>
+      <Button layoutX="373.0" layoutY="560.0" mnemonicParsing="false" text="Reset" />
+   </children>
+</AnchorPane>
