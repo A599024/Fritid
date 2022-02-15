@@ -96,23 +96,27 @@ public class WordleGame implements WordleGameInterface {
 	 * riktig bokstav
 	 */
 	@Override
-	public int[] checkForCorrectChars(String usersCurrentWord) {
+	public int[] checkForCorrectChars() {
 		int[] result = new int[5];
-		String gWord = gameWord.toLowerCase();
-		String uWord = usersCurrentWord.toLowerCase();
-		char[] correctChars = gWord.toCharArray();
-		char[] userChars = uWord.toCharArray();
-		
+		String riktig = gameWord;
+		String bruker = usersCurrentWord;
 		
 		for(int i = 0; i < gameWord.length(); i++) {
-			for(int j = 0; j < usersCurrentWord.length(); i++) {
-				if(userChars[i] == (correctChars[i])) {
-					result[i] = j;
-				}
+			
+			String riktigS = riktig.charAt(i) + "";
+			String brukerS = bruker.charAt(i) + "";
+			
+			if(riktigS.contentEquals(brukerS)) {
+				result[i] = 2;
+			}
+			else if(riktig.contains(brukerS)) {
+				result[i] = 1;
+			}
+			else {
+				result[i] = 0;
 			}
 		}
-		
-		return new int[2];
+		return result;
 	}
 	
 	@Override

@@ -9,17 +9,11 @@ public class testKlasse {
 		game.setUsersCurrentWord("bønne");
 		System.out.println("Brukers ord: " + game.getUsersCurrentWord());
 		System.out.println("Spillets ord: " + game.getGameWord());
-		System.out.println("Lovlig ord? " + game.checkLegalWord());
 		
-		System.out.println("User guessed correct? " + game.correctWord());
+		int[] res = game.checkForCorrectChars();
 		
-		
-		
-//		System.out.println("Vi er på rad nr 2: " + game.nextRow());
-//		System.out.println("Vi er på rad nr 3: " + game.nextRow());
-//		System.out.println("Vi er på rad nr 4: " + game.nextRow());
-//		System.out.println("Vi er på rad nr 5: " + game.nextRow());
-//		System.out.println("Vi er på rad nr ikke fler: " + game.nextRow());
+		for(int i : res)
+			System.out.print(i + ", ");
 		
 
 		

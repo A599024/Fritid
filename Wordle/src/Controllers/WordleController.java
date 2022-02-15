@@ -8,6 +8,10 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.Background;
+import javafx.scene.layout.BackgroundFill;
+import javafx.scene.layout.CornerRadii;
+import javafx.scene.paint.Color;
 
 public class WordleController {
 
@@ -53,6 +57,22 @@ public class WordleController {
 			three.setText(" " + characters[2] + "");
 			four.setText(" " + characters[3] + "");
 			five.setText(" " + characters[4] + "");
+			
+			
+			/***********************************************
+			 *  LEGG TIL FARGEBYTTE 
+			 ***********************************************/
+			
+			int[] res = game.checkForCorrectChars();
+			switch(res[0]) {
+			case 0:
+				one.setBackground(new Background(new BackgroundFill(Color.GREY, null, null)));
+			}
+			
+			/***********************************************
+			 * 
+			 ***********************************************/
+			
 
 		} else {
 			System.out.println("Not legal Word");

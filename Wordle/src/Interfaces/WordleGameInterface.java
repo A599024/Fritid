@@ -52,7 +52,7 @@ public interface WordleGameInterface {
 	 * 
 	 * @return	 a list of int values for the status of the correct characters
 	 */
-	public int[] checkForCorrectChars(String usersCurrentWord);
+	public int[] checkForCorrectChars();
 	
 	/**
 	 * Checks if Object variable currentRow is == 5
