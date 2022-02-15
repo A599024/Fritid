@@ -143,11 +143,16 @@
             <Font name="System Bold" size="30.0" />
          </font>
       </TextField>
-      <Button fx:id="goButton" layoutX="493.0" layoutY="479.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="55.0" text="GO" textOverrun="CLIP">
+      <Button fx:id="goButton" layoutX="493.0" layoutY="479.0" mnemonicParsing="false" onAction="#goAction" prefHeight="50.0" prefWidth="55.0" text="GO" textOverrun="CLIP">
          <font>
             <Font name="System Bold" size="22.0" />
          </font>
       </Button>
-      <Button layoutX="373.0" layoutY="560.0" mnemonicParsing="false" text="Reset" />
+      <Button fx:id="reset" layoutX="373.0" layoutY="560.0" mnemonicParsing="false" onAction="#resetAction" text="Reset" />
+      <Label fx:id="statusLabel" layoutX="108.0" layoutY="617.0" prefHeight="84.0" prefWidth="585.0" textFill="#c62121">
+         <font>
+            <Font size="40.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

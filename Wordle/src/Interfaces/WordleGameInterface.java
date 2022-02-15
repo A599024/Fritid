@@ -71,5 +71,7 @@ public interface WordleGameInterface {
 	public String getUsersCurrentWord();
 	
 	public String getGameWord();
+	
+	public int getCurrentRow();
 
 }

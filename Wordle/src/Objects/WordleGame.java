@@ -117,16 +117,8 @@ public class WordleGame implements WordleGameInterface {
 	
 	@Override
 	public boolean nextRow() {
-		boolean moreRows = true;
-		
-		if(currentRow < 5 && !correctWord()) {
-			currentRow++;
-			moreRows = true;
-		} else {
-			moreRows = false;
-		}
-		return moreRows;
-		
+		currentRow++;
+		return true;	
 	}
 
 	@Override
@@ -143,6 +135,12 @@ public class WordleGame implements WordleGameInterface {
 	public String getUsersCurrentWord() {
 		return usersCurrentWord;
 	}
+	
+	public int getCurrentRow() {
+		return currentRow;
+	}
+	
+	
 	
 	
 
