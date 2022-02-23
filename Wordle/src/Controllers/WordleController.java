@@ -1,6 +1,8 @@
 package Controllers;
 
 
+import java.util.Iterator;
+
 import Objects.WordleGame;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -39,6 +41,7 @@ public class WordleController {
 
 	private WordleGame game = new WordleGame();
 
+	private int[] res;
 
 	public void goAction(ActionEvent e) {
 					
@@ -62,12 +65,15 @@ public class WordleController {
 			/***********************************************
 			 *  LEGG TIL FARGEBYTTE 
 			 ***********************************************/
+			res = game.checkForCorrectChars();
+
 			
-			int[] res = game.checkForCorrectChars();
-			switch(res[0]) {
-			case 0:
-				one.setBackground(new Background(new BackgroundFill(Color.GREY, null, null)));
-			}
+			fargeBytte(res[0], one);
+			fargeBytte(res[1], two);
+			fargeBytte(res[2], three);
+			fargeBytte(res[3], four);
+			fargeBytte(res[4], five);
+
 			
 			/***********************************************
 			 * 
@@ -148,35 +154,67 @@ public class WordleController {
 
 	@FXML public void resetAction(ActionEvent event) {
 		userWord.setText("");
+		newSetup();
 	}
 	
 	public void newSetup() {
-		lb1.setText("");
-		lb2.setText("");
-		lb3.setText("");
-		lb4.setText("");
-		lb5.setText("");
-		lb6.setText("");
-		lb7.setText("");
-		lb8.setText("");
-		lb9.setText("");
-		lb10.setText("");
-		lb11.setText("");
-		lb12.setText("");
-		lb13.setText("");
-		lb14.setText("");
-		lb15.setText("");
-		lb16.setText("");
-		lb17.setText("");
-		lb18.setText("");
-		lb19.setText("");
-		lb20.setText("");
-		lb21.setText("");
-		lb22.setText("");
-		lb23.setText("");
-		lb24.setText("");
-		lb25.setText("");
-		userWord.setText("");
+		
+		Label[] labels = { lb1, lb2, lb3, lb4, lb5,
+							lb6, lb7, lb8, lb9, lb10,
+							lb11, lb12, lb13, lb14, lb15,
+							lb16, lb17, lb18, lb19, lb20,
+							lb21, lb22, lb23, lb24, lb25
+		};
+		
+		for(int i = 0; i < labels.length; i++) {
+			labels[i].setText("");
+			labels[i].setBackground(new Background(new BackgroundFill(Color.LIGHTGREY, null, null)));
+
+		}
+		
+//		lb1.setText("");
+//		lb2.setText("");
+//		lb3.setText("");
+//		lb4.setText("");
+//		lb5.setText("");
+//		lb6.setText("");
+//		lb7.setText("");
+//		lb8.setText("");
+//		lb9.setText("");
+//		lb10.setText("");
+//		lb11.setText("");
+//		lb12.setText("");
+//		lb13.setText("");
+//		lb14.setText("");
+//		lb15.setText("");
+//		lb16.setText("");
+//		lb17.setText("");
+//		lb18.setText("");
+//		lb19.setText("");
+//		lb20.setText("");
+//		lb21.setText("");
+//		lb22.setText("");
+//		lb23.setText("");
+//		lb24.setText("");
+//		lb25.setText("");
+//		userWord.setText("");
+		
+	}
+	
+	public void fargeBytte(int x, Label y) {
+		switch(x) {
+		case 0:
+			y.setBackground(new Background(new BackgroundFill(Color.LIGHTGREY, null, null)));
+			break;
+		case 1:
+			y.setBackground(new Background(new BackgroundFill(Color.YELLOW, null, null)));
+			break;
+		case 2:
+			y.setBackground(new Background(new BackgroundFill(Color.GREEN, null, null)));
+			break;
+		}
+		
+		
 	}
 
 	

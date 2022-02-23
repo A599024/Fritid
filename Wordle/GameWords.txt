@@ -4,3 +4,4 @@ faste
 lefse
 fiske
 rulle
+
