@@ -1,5 +1,7 @@
 package objekter;
 
+import enums.Farge;
+
 public class Spiller {
 	
 	/*
@@ -67,7 +69,7 @@ public class Spiller {
 			brikke = brikke4;
 		
 		if(brikke.getPossisjon() == -1) {
-			System.out.println(farge + " brikke1 er fortsatt inne!");
+			System.out.println(farge + " brikke er fortsatt inne!");
 			resultat = false;
 		} else {
 			brikke.flyttBrikke(antallFlytt);
@@ -75,6 +77,10 @@ public class Spiller {
 		
 		return resultat;
 		
+	}
+	
+	public boolean harFlereBrikkerInne() {
+		return brikkerInne > 0;
 	}
 
 	public Farge getFarge() {
@@ -123,6 +129,21 @@ public class Spiller {
 
 	public void setBrikke4(Brikke brikke4) {
 		this.brikke4 = brikke4;
+	}
+	
+	public Brikke getBrikke(int brikkeNr) {
+		Brikke brikke = null;
+		
+		if(brikkeNr == 1)
+			brikke = brikke1;
+		else if(brikkeNr == 2)
+			brikke = brikke2;
+		else if(brikkeNr == 3)
+			brikke = brikke3;
+		else if(brikkeNr == 4)
+			brikke = brikke4;
+		
+		return brikke;
 	}
 	
 	

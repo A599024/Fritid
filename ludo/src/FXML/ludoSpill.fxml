@@ -53,11 +53,7 @@
       <Label layoutX="387.0" layoutY="496.0" maxHeight="40.0" maxWidth="40.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: white;" />
       <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="1000.0" prefWidth="1500.0" style="-fx-background-color: grey;">
          <children>
-            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="650.0" layoutY="397.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../../Pictures/Photos%20Library.photoslibrary/resources/derivatives/masters/D/DD9C4039-3C21-4229-954E-1C793D0F6705_4_5005_c.jpeg" />
-               </image>
-            </ImageView>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="650.0" layoutY="397.0" pickOnBounds="true" preserveRatio="true" />
             <Label layoutX="705.0" layoutY="554.0" maxHeight="40.0" maxWidth="40.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: yellow;" />
             <Label layoutX="706.0" layoutY="597.0" maxHeight="40.0" maxWidth="40.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: yellow;" />
             <Label layoutX="706.0" layoutY="642.0" maxHeight="40.0" maxWidth="40.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: yellow;" />
@@ -179,7 +175,7 @@
                   <Font size="24.0" />
                </font>
             </Label>
-            <Button layoutX="212.0" layoutY="516.0" mnemonicParsing="false" onAction="#startSpill" prefHeight="68.0" prefWidth="76.0" text="start" />
+            <Button fx:id="startKnapp" layoutX="212.0" layoutY="516.0" mnemonicParsing="false" onAction="#startSpill" prefHeight="68.0" prefWidth="76.0" text="start" />
             <TextField fx:id="nuMSpillere" layoutX="170.0" layoutY="442.0" prefHeight="26.0" prefWidth="83.0" />
          </children>
       </AnchorPane>

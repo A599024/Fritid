@@ -1,5 +1,7 @@
 package objekter;
 
+import enums.Farge;
+
 public class Brikke {
 	
 	/*
@@ -26,13 +28,16 @@ public class Brikke {
 	 */
 	public void brikkeUt() {
 		if(farge == Farge.GUL)
-			possisjon = 0;
+			possisjon = 1;
 		if(farge == Farge.GRONN)
-			possisjon = 13;
-		if(farge == Farge.ROD)
-			possisjon = 26;
+			possisjon = 14;
 		if(farge == Farge.BLA)
-			possisjon = 39;
+			possisjon = 27;
+		if(farge == Farge.ROD)
+			possisjon = 40;
+		
+		iSafeSone = true;
+		System.out.println("Ny brikke i safeSone");
 		
 		System.out.println(farge + " brikke flyttes ut...");
 	}

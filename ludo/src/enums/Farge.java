@@ -1,4 +1,4 @@
-package objekter;
+package enums;
 
 public enum Farge {
 	

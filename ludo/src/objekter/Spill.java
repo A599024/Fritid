@@ -4,13 +4,15 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.concurrent.LinkedBlockingQueue;
 
+import enums.Farge;
+
 public class Spill {
 	
 	private int antallSpillere;
 	private Spiller aktuellSpiller;
 	private Spiller spiller1, spiller2, spiller3, spiller4;
 	private Spiller[] spillere = {spiller1, spiller2, spiller3, spiller4};
-	private Farge[] farger = {Farge.GUL, Farge.GRONN, Farge.ROD, Farge.BLA};
+	private Farge[] farger = {Farge.GUL, Farge.GRONN, Farge.BLA, Farge.ROD};
 	private Queue<Spiller> koe = new LinkedBlockingQueue<>();
 	
 	
@@ -29,11 +31,40 @@ public class Spill {
 		System.out.println("\n" + "Nytt Spill opprettet!");
 	}
 	
+	/*
+	 * MÅ FIKSE: hvis man trykker ut og tarning ikke er 6 så går ikke valget
+	 * 			hvis man ikke har flere
+	 *
+	 */
+	
 	/* handling = 0 betyr ut, handling = 1 betyr flytt. */
-	public void handling(int tarning, int handling) {
+	public void handling(int tarning, int handling, int brikkenummer) {
+		boolean kastIgjen = false;
+		if(tarning == 6)
+			kastIgjen = true; 
 		
+		if(handling == 0 && aktuellSpiller.harFlereBrikkerInne() && tarning == 6)
+		{
+			aktuellSpiller.brikkeUt();
+		}
+		else if(handling == 1) 
+		{
+			aktuellSpiller.flyttBrikke(brikkenummer, tarning);
+		}
+		else if(tarning != 6 && getAktuellSpiller().getBrikkerInne() == 4)
+		{
+			System.out.println(aktuellSpiller.getFarge() + " kan ikke gjøre noen valg");
+		}
+		else
+		{
+			aktuellSpiller.flyttBrikke(brikkenummer, tarning);
+		}
 		
-		
+		if(kastIgjen == true)
+		{
+			// TODO
+			System.out.println("DU KAN KASTE IGJEN!");
+		}
 		
 	}
 	
