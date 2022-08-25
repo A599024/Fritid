@@ -170,13 +170,13 @@
             <Button layoutX="434.0" layoutY="901.0" mnemonicParsing="false" onAction="#flyttB3" prefHeight="40.0" prefWidth="76.0" text="Flytt b3" />
             <Button layoutX="525.0" layoutY="901.0" mnemonicParsing="false" onAction="#flyttB4" prefHeight="40.0" prefWidth="76.0" text="Flytt b4" />
             <Button fx:id="nyBrikke" layoutX="625.0" layoutY="901.0" mnemonicParsing="false" onAction="#utNyBrikke" prefHeight="40.0" prefWidth="104.0" text="Ut med brikke" />
-            <Label fx:id="spillerSinTur" layoutX="618.0" layoutY="843.0" prefHeight="48.0" prefWidth="142.0" text="Spiller ___" textFill="#da2c2c">
+            <Label fx:id="currentPlayer" layoutX="618.0" layoutY="843.0" prefHeight="48.0" prefWidth="142.0" text="Spiller ___" textFill="#da2c2c">
                <font>
                   <Font size="24.0" />
                </font>
             </Label>
-            <Button fx:id="startKnapp" layoutX="212.0" layoutY="516.0" mnemonicParsing="false" onAction="#startSpill" prefHeight="68.0" prefWidth="76.0" text="start" />
-            <TextField fx:id="nuMSpillere" layoutX="170.0" layoutY="442.0" prefHeight="26.0" prefWidth="83.0" />
+            <Button fx:id="startKnapp" layoutX="174.0" layoutY="482.0" mnemonicParsing="false" onAction="#startSpill" prefHeight="68.0" prefWidth="76.0" text="start" />
+            <TextField fx:id="numSpillere" layoutX="170.0" layoutY="442.0" prefHeight="26.0" prefWidth="83.0" />
          </children>
       </AnchorPane>
    </children>

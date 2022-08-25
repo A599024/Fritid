@@ -18,6 +18,7 @@ public class Player {
 	private Color color;
 	private Piece piece1, piece2, piece3, piece4;
 	private int num1, num2, num3, num4, num5, num6;
+	private int startVal;
 	
 	public Player(Color color) {
 		System.out.println("Player " + color + " created." + "\n");
@@ -37,16 +38,11 @@ public class Player {
 		piecesInside.add(piece2);
 		piecesInside.add(piece1);
 	}
-	
+		
 	public void movePiece(int pieceNumber, int dice) {
 		
-		/*
-		 * BLUE 51 is last
-		 * RED 64 is last
-		 * GREEN 77 is last
-		 * YELLOW 90 is last
-		 */
 		if(color == Color.BLUE) {
+			startVal = 1;
 			num1 = 101;
 			num2 = 102;
 			num3 = 103;
@@ -54,6 +50,7 @@ public class Player {
 			num5 = 105;
 			num6 = 106;
 		} else if(color == Color.RED) {
+			startVal = 14;
 			num1 = 201;
 			num2 = 202;
 			num3 = 203;
@@ -61,6 +58,7 @@ public class Player {
 			num5 = 205;
 			num6 = 206;
 		} else if(color == Color.GREEN) {
+			startVal = 27;
 			num1 = 301;
 			num2 = 302;
 			num3 = 303;
@@ -68,6 +66,7 @@ public class Player {
 			num5 = 305;
 			num6 = 306;
 		} else if(color == Color.YELLOW) {
+			startVal = 40;
 			num1 = 401;
 			num2 = 402;
 			num3 = 403;
@@ -82,28 +81,34 @@ public class Player {
 				System.out.println(color + " Piece 1 is still inside!");
 			} else {
 				
-				if(piece1.getPosition() + dice > 51 && piece1.getPosition() + dice <= 57) {
+				if(piece1.getPosition() + dice > (startVal+50) /* && piece1.getPosition() + dice <= (startVal + 50 + 6) */) {
 
-					int pos = piece1.getPosition();
-					if(pos == 52)
+					int pos = piece1.getPosition() + dice;
+					if(pos == (startVal + 50 + 1) || pos == num1)
 						piece1.setPosition(num1);
-					else if(pos == 53)
+					else if(pos == (startVal + 50 + 2) || pos == num2)
 						piece1.setPosition(num2);
-					else if(pos == 54)
+					else if(pos == (startVal + 50 + 3) || pos == num3)
 						piece1.setPosition(num3);
-					else if(pos == 55)
+					else if(pos == (startVal + 50 + 4) || pos == num4)
 						piece1.setPosition(num4);
-					else if(pos == 56)
+					else if(pos == (startVal + 50 + 5) || pos == num5)
 						piece1.setPosition(num5);
-					else if(pos == 57)
+					else if(pos == (startVal + 50 + 6) || pos == num6)
+					{
 						piece1.setPosition(num6);
+						piecesFinished.add(piece1);
+						System.out.println(color + " piece 1 inside!");
+						checkVictory();
+					} else {
+						System.out.println("Piece 1 cant be moved, it will go over the finishline.");
+					}
 					
 					
-				} else if(piece1.getPosition() + dice > -1 && piece1.getPosition() + dice <= 51) {
+					
+				} else if(piece1.getPosition() + dice > -1 && piece1.getPosition() + dice <= (startVal + 50)) {
 					System.out.println(color + " Moves piece 1 from " + piece1.getPosition() + " to " + (piece1.getPosition() + dice) + "." + "\n");
 					piece1.setPosition(piece1.getPosition() + dice);					
-				} else {
-					System.out.println("Piece 1 cant be moved, it will go over the finishline.");
 				}
 				
 			}
@@ -115,27 +120,32 @@ public class Player {
 				System.out.println(color + " Piece 2 is still inside!");
 			} else {
 			
-				if(piece2.getPosition() + dice > 51 && piece2.getPosition() + dice <= 57) {
+				if(piece2.getPosition() + dice > (startVal + 50) /* && piece2.getPosition() + dice <= (startVal + 50 + 6) */) {
 				
-					int pos = piece2.getPosition();
-					if(pos == 65)
+					int pos = piece2.getPosition() + dice;
+					if(pos == (startVal + 50 + 1) || pos == num1)
 						piece2.setPosition(num1);
-					else if(pos == 66)
+					else if(pos == (startVal + 50 + 2) || pos == num2)
 						piece2.setPosition(num2);
-					else if(pos == 67)
+					else if(pos == (startVal + 50 + 3) || pos == num3)
 						piece2.setPosition(num3);
-					else if(pos == 68)
+					else if(pos == (startVal + 50 + 4) || pos == num4)
 						piece2.setPosition(num4);
-					else if(pos == 69)
+					else if(pos == (startVal + 50 + 5) || pos == num5)
 						piece2.setPosition(num5);
-					else if(pos == 70)
-						piece2.setPosition(num6);
+					else if(pos == (startVal + 50 + 6) || pos == num6)
+					{
+						piece1.setPosition(num6);
+						piecesFinished.add(piece1);
+						System.out.println(color + " piece 1 inside!");
+						checkVictory();
+					} else {
+						System.out.println("Piece 2 cant be moved, it will go over the finishline.");
+					}
 					
-				} else if(piece2.getPosition() + dice > -1 && piece2.getPosition() + dice <= 51) {
+				} else if(piece2.getPosition() + dice > -1 && piece2.getPosition() + dice <= (startVal + 50)) {
 					System.out.println(color + " Moves piece 2 from " + piece2.getPosition() + " to " + (piece2.getPosition() + dice) + "." + "\n");
 					piece2.setPosition(piece2.getPosition() + dice);					
-				} else {
-					System.out.println("Piece 2 cant be moved, it will go over the finishline.");
 				}
 				
 			}
@@ -147,28 +157,34 @@ public class Player {
 				System.out.println(color + " Piece 3 is still inside!");
 			} else {
 			
-				if(piece3.getPosition() + dice > 51 && piece3.getPosition() + dice <= 57) {
+				if(piece3.getPosition() + dice > (startVal + 50) /* && piece3.getPosition() + dice <= (startVal + 50 + 6) */) {
 				
-					int pos = piece3.getPosition();
-					if(pos == 65)
+					int pos = piece3.getPosition() + dice;
+					if(pos == (startVal + 50 + 1) || pos == num1)
 						piece3.setPosition(num1);
-					else if(pos == 66)
+					else if(pos == (startVal + 50 + 2) || pos == num2)
 						piece3.setPosition(num2);
-					else if(pos == 67)
+					else if(pos == (startVal + 50 + 3) || pos == num3)
 						piece3.setPosition(num3);
-					else if(pos == 68)
+					else if(pos == (startVal + 50 + 4) || pos == num4)
 						piece3.setPosition(num4);
-					else if(pos == 69)
+					else if(pos == (startVal + 50 + 5) || pos == num5)
 						piece3.setPosition(num5);
-					else if(pos == 70)
-						piece3.setPosition(num6);
+					else if(pos == (startVal + 50 + 6) || pos == num6)
+					{
+						piece1.setPosition(num6);
+						piecesFinished.add(piece1);
+						System.out.println(color + " piece 1 inside!");
+						checkVictory();
+					} else {
+						System.out.println("Piece 2 cant be moved, it will go over the finishline.");
+					}
 					
-				} else if(piece3.getPosition() + dice > -1 && piece3.getPosition() + dice <= 51) {
+				} else if(piece3.getPosition() + dice > -1 && piece3.getPosition() + dice <= (startVal + 50)) {
 					System.out.println(color + " Moves piece 3 from " + piece3.getPosition() + " to " + (piece3.getPosition() + dice) + "." + "\n");
 					piece3.setPosition(piece3.getPosition() + dice);					
-				} else {
-					System.out.println("Piece 3 cant be moved, it will go over the finishline.");
-				}			
+				}
+				
 			}
 			
 		/* Piece 4 */	
@@ -178,33 +194,46 @@ public class Player {
 				System.out.println(color + " Piece 4 is still inside!");
 			} else {
 			
-				if(piece4.getPosition() + dice > 51 && piece4.getPosition() + dice <= 57) {
+				if(piece4.getPosition() + dice > (startVal + 50) /* && piece4.getPosition() + dice <= (startVal + 50 + 6) */) {
 				
-					int pos = piece4.getPosition();
-					if(pos == 65)
+					int pos = piece4.getPosition() + dice;
+					if(pos == (startVal + 50 + 1) || pos == num1)
 						piece4.setPosition(num1);
-					else if(pos == 66)
+					else if(pos == (startVal + 50 + 2) || pos == num2)
 						piece4.setPosition(num2);
-					else if(pos == 67)
+					else if(pos == (startVal + 50 + 3) || pos == num3)
 						piece4.setPosition(num3);
-					else if(pos == 68)
+					else if(pos == (startVal + 50 + 4) || pos == num4)
 						piece4.setPosition(num4);
-					else if(pos == 69)
+					else if(pos == (startVal + 50 + 5) || pos == num5)
 						piece4.setPosition(num5);
-					else if(pos == 70)
-						piece4.setPosition(num6);
+					else if(pos == (startVal + 50 + 6) || pos == num6)
+					{
+						piece1.setPosition(num6);
+						piecesFinished.add(piece1);
+						System.out.println(color + " piece 1 inside!");
+						checkVictory();
+					} else {
+						System.out.println("Piece 2 cant be moved, it will go over the finishline.");
+					}
 					
-				} else if(piece4.getPosition() + dice > -1 && piece4.getPosition() + dice <= 51) {
+				} else if(piece4.getPosition() + dice > -1 && piece4.getPosition() + dice <= (startVal + 50)) {
 					System.out.println(color + " Moves piece 4 from " + piece4.getPosition() + " to " + (piece4.getPosition() + dice) + "." + "\n");
 					piece4.setPosition(piece4.getPosition() + dice);					
-				} else {
-					System.out.println("Piece 4 cant be moved, it will go over the finishline.");
-				}			
+				}
+				
 			}
 			
 		}		
 	}
 	
+	private void checkVictory() {
+		if(piecesFinished.size() == 4) {
+			System.out.println(color + " HAVE WON THE GAME!!!!!");
+		}
+		
+	}
+
 	public void pieceOut() {
 		Piece piece = piecesInside.removeLast();
 		piece.pieceOut();

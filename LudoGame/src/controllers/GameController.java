@@ -5,6 +5,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import objects.Board;
 
 public class GameController {
 
@@ -57,10 +58,13 @@ public class GameController {
     private Label base4Rod;
 
     @FXML
+    private Label currentPlayer;
+
+    @FXML
     private Button kast;
 
     @FXML
-    private TextField nuMSpillere;
+    private TextField numSpillere;
 
     @FXML
     private Button nyBrikke;
@@ -222,47 +226,99 @@ public class GameController {
     private Label q9;
 
     @FXML
-    private Label spillerSinTur;
-
-    @FXML
     private Button startKnapp;
 
     @FXML
     private Label tarningRes;
+    
+    
+    /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+    
+    private boolean numPlayersChoosed = false;
+    private int gamePlayers;
+    private Board game;
+    
+    
+    
+    
+    
+    
+    
+    
 
     @FXML
     void flyttB1(ActionEvent event) {
-
+    	game.move(1);
     }
 
     @FXML
     void flyttB2(ActionEvent event) {
-
+    	game.move(2);
     }
 
     @FXML
     void flyttB3(ActionEvent event) {
-
+    	game.move(3);
     }
 
     @FXML
     void flyttB4(ActionEvent event) {
-
+    	game.move(4);
     }
 
     @FXML
     void kastTarning(ActionEvent event) {
-
+    	game.rollDice();
     }
 
     @FXML
     void startSpill(ActionEvent event) {
-
+    	try {
+    		
+    		int spillere = Integer.parseInt(numSpillere.getText());
+    		switch(spillere) 
+    		{
+    		case 2:
+    			gamePlayers = 2;
+    			break;
+    		case 3:
+    			gamePlayers = 3;
+    			break;
+    		case 4:
+    			gamePlayers = 4;
+    			break;
+    		default:
+    			gamePlayers = 4;
+    			break;
+    		}
+    		
+    		game = new Board(gamePlayers);
+    		numSpillere.setVisible(false);
+    		startKnapp.setVisible(false);
+    		updateCurPlayer();
+    		
+    		
+    	} catch(Exception e) {
+    		System.out.println("må skrive inn tall");
+    	}
     }
 
     @FXML
     void utNyBrikke(ActionEvent event) {
-
+    	game.moveOut();
+    }
+    
+    public void updateCurPlayer() {
+    	String s = "Spiller: ";
+    	currentPlayer.setText(s + game.getPlayerInPlay().getColor());
+    }
+    
+    public void updateBoard() {
+    	for(int i = 1; i <= gamePlayers; i++)
+    	{
+    		
+    	}
+    	
     }
 
 }

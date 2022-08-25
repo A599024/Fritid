@@ -80,6 +80,9 @@ public class TestGame {
 						board.getPlayer2().getPiecesInside().size() /*+ "\n" + 
 						board.getPlayer3().getPiecesInside().size() + "\n" + 
 						board.getPlayer4().getPiecesInside().size()*/);
+				break;
+			case 40:
+				board.setDice(50);
 			}
 			i++;
 			

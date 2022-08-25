@@ -36,7 +36,7 @@ public class Board {
 		
 		this.gameQueue = new LinkedBlockingQueue<>();
 		this.dice = 0;
-		this.board = new LinkedList[500];
+		this.board = new LinkedList[410];
 		for(int i = 0; i < board.length; i++) {
 			board[i] = new LinkedList<>();
 		}
@@ -80,11 +80,11 @@ public class Board {
 				pieces.add(player4.getPiece(i));
 		}
 		
-		
 		this.playerInPlay = player1;
 	}
 	
 	public void rollDice() {
+		
 		if(dice == 6) {
 			canRollDice = true;
 		}
@@ -111,7 +111,6 @@ public class Board {
 		
 		canRollDice = true;
 		firstRollDice = true;
-		
 		
 		System.out.println(playerInPlay.getColor() + " Player´s turn." + "\n");
 	}
@@ -306,6 +305,16 @@ public class Board {
 			}
 		}
 	}
+	
+	public boolean isFinished(Player player) {
+		boolean finished = false;
+		if(player.getPiecesFinished().size() == 4) {
+			gameQueue.remove();
+			playerInPlay = gameQueue.peek();
+		}
+			
+		return finished;
+	}
 
 	public Queue<Player> getGameQueue() {
 		return gameQueue;
@@ -374,7 +383,5 @@ public class Board {
 	public void allowPieceOut() {
 		canMoveOut = true; 
 	}
-
-	
 
 }
