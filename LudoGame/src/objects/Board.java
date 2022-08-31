@@ -41,6 +41,8 @@ public class Board {
 			board[i] = new LinkedList<>();
 		}
 		
+// kan også fikse så dette er litt kortere og kompakt
+		
 		// TODO - Her kan man lage mulighet for en AI til å spille mot deg.
 		if(numPlayers == 2) {
 			player1 = new Player(Color.BLUE);
@@ -236,6 +238,8 @@ public class Board {
 			// LinkedList<Piece> place = board[playerInPlay.getPiece(piece).getPosition()];
 			Piece p = playerInPlay.getPiece(piece);
 			
+// her kan koden gjøres mer kompakt og lett leslig			
+			
 			/* Safespots */
 			if(p.getPosition() != 1 && p.getPosition() != 9 && p.getPosition() != 14 && p.getPosition() != 22 && p.getPosition() != 27 && p.getPosition() != 35 && 
 					p.getPosition() != 40 && p.getPosition() != 48 && p.getPosition() != 53 && p.getPosition() != 61 && p.getPosition() != 66 && p.getPosition() != 74 &&
@@ -382,6 +386,16 @@ public class Board {
 	
 	public void allowPieceOut() {
 		canMoveOut = true; 
+	}
+	
+	public Player getPlayer(int player) {
+		switch(player) {
+		case 1: return player1;
+		case 2: return player2;
+		case 3: return player3;
+		case 4: return player4;
+		default: return null;
+		}
 	}
 
 }

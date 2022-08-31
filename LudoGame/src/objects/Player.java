@@ -40,6 +40,9 @@ public class Player {
 	}
 		
 	public void movePiece(int pieceNumber, int dice) {
+
+// hele metoden kan også bli mer kompakt med brikkene
+// mulig å gjøre det her litt mer kompakt med strings
 		
 		if(color == Color.BLUE) {
 			startVal = 1;
@@ -240,17 +243,6 @@ public class Player {
 		System.out.println(color + " Piece " + piece.getNumber() + " moved out." + "\n");
 	}
 	
-	public Piece getPiece(int piece) {
-		if(piece == 1)
-			return piece1;
-		else if(piece == 2) 
-			return piece2;
-		else if(piece == 3)
-			return piece3;
-		else
-			return piece4;
-	}
-	
 	public int getPiecesOutside() {
 		return (4 - piecesInside.size());
 	}
@@ -313,6 +305,17 @@ public class Player {
 	
 	public void setPieceInside(Piece piece) {
 		piecesInside.add(piece);
+	}
+	
+	public Piece getPiece(int pieceNum) {
+		switch(pieceNum)
+		{
+		case 1: return piece1;
+		case 2: return piece2;
+		case 3: return piece3;
+		case 4: return piece4;
+		default: return null;
+		}
 	}
 
 }

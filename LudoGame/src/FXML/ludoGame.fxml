@@ -54,30 +54,30 @@
       <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="1000.0" prefWidth="1500.0" style="-fx-background-color: grey;">
          <children>
             <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="650.0" layoutY="397.0" pickOnBounds="true" preserveRatio="true" />
-            <Label layoutX="705.0" layoutY="554.0" maxHeight="40.0" maxWidth="40.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: yellow;" />
-            <Label layoutX="706.0" layoutY="597.0" maxHeight="40.0" maxWidth="40.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: yellow;" />
-            <Label layoutX="706.0" layoutY="642.0" maxHeight="40.0" maxWidth="40.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: yellow;" />
-            <Label layoutX="706.0" layoutY="686.0" maxHeight="40.0" maxWidth="40.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: yellow;" />
-            <Label layoutX="707.0" layoutY="731.0" maxHeight="40.0" maxWidth="40.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: yellow;" />
-            <Label layoutX="606.0" layoutY="453.0" maxHeight="40.0" maxWidth="40.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: lightGreen;" />
-            <Label layoutX="805.0" layoutY="453.0" maxHeight="40.0" maxWidth="40.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: pink;" />
-            <Label layoutX="708.0" layoutY="353.0" maxHeight="40.0" maxWidth="40.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: lightBlue;" />
-            <Label fx:id="q1" layoutX="661.0" layoutY="731.0" maxHeight="40.0" maxWidth="40.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: yellow;" />
-            <Label layoutX="563.0" layoutY="453.0" maxHeight="40.0" maxWidth="40.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: lightGreen;" />
-            <Label layoutX="520.0" layoutY="454.0" maxHeight="40.0" maxWidth="40.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: lightGreen;" />
-            <Label layoutX="475.0" layoutY="454.0" maxHeight="40.0" maxWidth="40.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: lightGreen;" />
-            <Label layoutX="432.0" layoutY="453.0" maxHeight="40.0" maxWidth="40.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: lightGreen;" />
-            <Label fx:id="q14" layoutX="431.0" layoutY="410.0" maxHeight="40.0" maxWidth="40.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: lightGreen;" />
-            <Label layoutX="708.0" layoutY="310.0" maxHeight="40.0" maxWidth="40.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: lightBlue;" />
-            <Label layoutX="708.0" layoutY="268.0" maxHeight="40.0" maxWidth="40.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: lightBlue;" />
-            <Label layoutX="710.0" layoutY="226.0" maxHeight="40.0" maxWidth="40.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: lightBlue;" />
-            <Label layoutX="708.0" layoutY="184.0" maxHeight="40.0" maxWidth="40.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: lightBlue;" />
-            <Label fx:id="q27" layoutX="752.0" layoutY="184.0" maxHeight="40.0" maxWidth="40.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: lightBlue;" />
-            <Label layoutX="847.0" layoutY="453.0" maxHeight="40.0" maxWidth="40.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: pink;" />
-            <Label layoutX="889.0" layoutY="454.0" maxHeight="40.0" maxWidth="40.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: pink;" />
-            <Label layoutX="933.0" layoutY="453.0" maxHeight="40.0" maxWidth="40.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: pink;" />
-            <Label layoutX="976.0" layoutY="454.0" maxHeight="40.0" maxWidth="40.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: pink;" />
-            <Label fx:id="q40" layoutX="977.0" layoutY="496.0" maxHeight="40.0" maxWidth="40.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: pink;" />
+            <Label fx:id="q105" layoutX="705.0" layoutY="554.0" maxHeight="40.0" maxWidth="40.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: lightBlue;" />
+            <Label fx:id="q104" layoutX="706.0" layoutY="597.0" maxHeight="40.0" maxWidth="40.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: lightBlue;" />
+            <Label fx:id="q103" layoutX="706.0" layoutY="642.0" maxHeight="40.0" maxWidth="40.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: lightBlue;" />
+            <Label fx:id="q102" layoutX="706.0" layoutY="686.0" maxHeight="40.0" maxWidth="40.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: lightBlue;" />
+            <Label fx:id="q101" layoutX="707.0" layoutY="731.0" maxHeight="40.0" maxWidth="40.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: lightBlue;" />
+            <Label fx:id="q205" layoutX="606.0" layoutY="453.0" maxHeight="40.0" maxWidth="40.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: pink;" />
+            <Label fx:id="q405" layoutX="805.0" layoutY="453.0" maxHeight="40.0" maxWidth="40.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: yellow;" />
+            <Label fx:id="q305" layoutX="708.0" layoutY="353.0" maxHeight="40.0" maxWidth="40.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: lightGreen;" />
+            <Label fx:id="q1" layoutX="661.0" layoutY="731.0" maxHeight="40.0" maxWidth="40.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: lightBlue;" />
+            <Label fx:id="q204" layoutX="563.0" layoutY="453.0" maxHeight="40.0" maxWidth="40.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: pink;" />
+            <Label fx:id="q203" layoutX="520.0" layoutY="454.0" maxHeight="40.0" maxWidth="40.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: pink;" />
+            <Label fx:id="q202" layoutX="475.0" layoutY="454.0" maxHeight="40.0" maxWidth="40.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: pink;" />
+            <Label fx:id="q201" layoutX="432.0" layoutY="453.0" maxHeight="40.0" maxWidth="40.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: pink;" />
+            <Label fx:id="q14" layoutX="431.0" layoutY="410.0" maxHeight="40.0" maxWidth="40.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: pink;" />
+            <Label fx:id="q304" layoutX="708.0" layoutY="310.0" maxHeight="40.0" maxWidth="40.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: lightGreen;" />
+            <Label fx:id="q303" layoutX="708.0" layoutY="268.0" maxHeight="40.0" maxWidth="40.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: lightGreen;" />
+            <Label fx:id="q302" layoutX="710.0" layoutY="226.0" maxHeight="40.0" maxWidth="40.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: lightGreen;" />
+            <Label fx:id="q301" layoutX="708.0" layoutY="184.0" maxHeight="40.0" maxWidth="40.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: lightGreen;" />
+            <Label fx:id="q27" layoutX="752.0" layoutY="184.0" maxHeight="40.0" maxWidth="40.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: lightGreen;" />
+            <Label fx:id="q404" layoutX="847.0" layoutY="453.0" maxHeight="40.0" maxWidth="40.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: yellow;" />
+            <Label fx:id="q403" layoutX="889.0" layoutY="454.0" maxHeight="40.0" maxWidth="40.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: yellow;" />
+            <Label fx:id="q402" layoutX="933.0" layoutY="453.0" maxHeight="40.0" maxWidth="40.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: yellow;" />
+            <Label fx:id="q401" layoutX="976.0" layoutY="454.0" maxHeight="40.0" maxWidth="40.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: yellow;" />
+            <Label fx:id="q40" layoutX="977.0" layoutY="496.0" maxHeight="40.0" maxWidth="40.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: yellow;" />
             <Label layoutX="594.0" layoutY="39.0" prefHeight="96.0" prefWidth="441.0" text="El Depreso Ludo" textAlignment="CENTER" textFill="#831010" textOverrun="WORD_ELLIPSIS" underline="true">
                <font>
                   <Font name="Times New Roman" size="40.0" />
@@ -131,30 +131,30 @@
             <Label fx:id="q21" layoutX="662.0" layoutY="267.0" maxHeight="40.0" maxWidth="40.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: white;" />
             <Label fx:id="q20" layoutX="660.0" layoutY="313.0" maxHeight="40.0" maxWidth="40.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: white;" />
             <Label fx:id="q19" layoutX="660.0" layoutY="355.0" maxHeight="40.0" maxWidth="40.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: white;" />
-            <Label layoutX="394.0" layoutY="547.0" prefHeight="262.0" prefWidth="256.0" style="-fx-background-color: yellow;" />
-            <Label layoutX="394.0" layoutY="137.0" prefHeight="262.0" prefWidth="256.0" style="-fx-background-color: lightGreen;" />
-            <Label layoutX="801.0" layoutY="136.0" prefHeight="262.0" prefWidth="256.0" style="-fx-background-color: lightBlue;" />
-            <Label layoutX="806.0" layoutY="552.0" prefHeight="262.0" prefWidth="256.0" style="-fx-background-color: pink;" />
+            <Label layoutX="394.0" layoutY="547.0" prefHeight="262.0" prefWidth="256.0" style="-fx-background-color: lightBlue;" />
+            <Label layoutX="394.0" layoutY="137.0" prefHeight="262.0" prefWidth="256.0" style="-fx-background-color: pink;" />
+            <Label layoutX="801.0" layoutY="136.0" prefHeight="262.0" prefWidth="256.0" style="-fx-background-color: lightGreen;" />
+            <Label layoutX="806.0" layoutY="552.0" prefHeight="262.0" prefWidth="256.0" style="-fx-background-color: yellow;" />
             <Label layoutX="442.0" layoutY="187.0" prefHeight="166.0" prefWidth="166.0" style="-fx-background-color: white;" />
             <Label layoutX="852.0" layoutY="187.0" prefHeight="166.0" prefWidth="166.0" style="-fx-background-color: white;" />
             <Label layoutX="438.0" layoutY="598.0" prefHeight="166.0" prefWidth="166.0" style="-fx-background-color: white;" />
             <Label layoutX="849.0" layoutY="603.0" prefHeight="166.0" prefWidth="166.0" style="-fx-background-color: white;" />
-            <Label fx:id="base3Gronn" layoutX="471.0" layoutY="207.0" maxHeight="40.0" maxWidth="40.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: lightGreen;" />
-            <Label fx:id="base4Gronn" layoutX="541.0" layoutY="208.0" maxHeight="40.0" maxWidth="40.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: lightGreen;" />
-            <Label fx:id="base1Gronn" layoutX="471.0" layoutY="272.0" maxHeight="40.0" maxWidth="40.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: lightGreen;" />
-            <Label fx:id="base2Gronn" layoutX="539.0" layoutY="269.0" maxHeight="40.0" maxWidth="40.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: lightGreen;" />
-            <Label fx:id="base3Bla" layoutX="870.0" layoutY="207.0" maxHeight="40.0" maxWidth="40.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: lightBlue;" />
-            <Label fx:id="base4Bla" layoutX="956.0" layoutY="207.0" maxHeight="40.0" maxWidth="40.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: lightBlue;" />
-            <Label fx:id="base2Bla" layoutX="958.0" layoutY="286.0" maxHeight="40.0" maxWidth="40.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: lightBlue;" />
-            <Label fx:id="base1Bla" layoutX="870.0" layoutY="287.0" maxHeight="40.0" maxWidth="40.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: lightBlue;" />
-            <Label fx:id="base3Rod" layoutX="871.0" layoutY="623.0" maxHeight="40.0" maxWidth="40.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: pink;" />
-            <Label fx:id="base4Rod" layoutX="938.0" layoutY="623.0" maxHeight="40.0" maxWidth="40.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: pink;" />
-            <Label fx:id="base2Rod" layoutX="937.0" layoutY="704.0" maxHeight="40.0" maxWidth="40.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: pink;" />
-            <Label fx:id="base1Rod" layoutX="870.0" layoutY="702.0" maxHeight="40.0" maxWidth="40.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: pink;" />
-            <Label fx:id="base4Gul" layoutX="543.0" layoutY="617.0" maxHeight="40.0" maxWidth="40.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: yellow;" />
-            <Label fx:id="base2Gul" layoutX="543.0" layoutY="688.0" maxHeight="40.0" maxWidth="40.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: yellow;" />
-            <Label fx:id="base1Gul" layoutX="473.0" layoutY="688.0" maxHeight="40.0" maxWidth="40.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: yellow;" />
-            <Label fx:id="base3Gul" layoutX="475.0" layoutY="618.0" maxHeight="40.0" maxWidth="40.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: yellow;" />
+            <Label fx:id="base3Gronn" layoutX="471.0" layoutY="207.0" maxHeight="40.0" maxWidth="40.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: pink;" />
+            <Label fx:id="base4Gronn" layoutX="541.0" layoutY="208.0" maxHeight="40.0" maxWidth="40.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: pink;" />
+            <Label fx:id="base1Gronn" layoutX="471.0" layoutY="272.0" maxHeight="40.0" maxWidth="40.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: pink;" />
+            <Label fx:id="base2Gronn" layoutX="539.0" layoutY="269.0" maxHeight="40.0" maxWidth="40.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: pink;" />
+            <Label fx:id="base3Bla" layoutX="870.0" layoutY="207.0" maxHeight="40.0" maxWidth="40.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: lightGreen;" />
+            <Label fx:id="base4Bla" layoutX="956.0" layoutY="207.0" maxHeight="40.0" maxWidth="40.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: lightGreen;" />
+            <Label fx:id="base2Bla" layoutX="958.0" layoutY="286.0" maxHeight="40.0" maxWidth="40.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: lightGreen;" />
+            <Label fx:id="base1Bla" layoutX="870.0" layoutY="287.0" maxHeight="40.0" maxWidth="40.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: lightGreen;" />
+            <Label fx:id="base3Rod" layoutX="871.0" layoutY="623.0" maxHeight="40.0" maxWidth="40.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: yellow;" />
+            <Label fx:id="base4Rod" layoutX="938.0" layoutY="623.0" maxHeight="40.0" maxWidth="40.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: yellow;" />
+            <Label fx:id="base2Rod" layoutX="937.0" layoutY="704.0" maxHeight="40.0" maxWidth="40.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: yellow;" />
+            <Label fx:id="base1Rod" layoutX="870.0" layoutY="702.0" maxHeight="40.0" maxWidth="40.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: yellow;" />
+            <Label fx:id="base4Gul" layoutX="543.0" layoutY="617.0" maxHeight="40.0" maxWidth="40.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: lightBlue;" />
+            <Label fx:id="base2Gul" layoutX="543.0" layoutY="688.0" maxHeight="40.0" maxWidth="40.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: lightBlue;" />
+            <Label fx:id="base1Gul" layoutX="473.0" layoutY="688.0" maxHeight="40.0" maxWidth="40.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: lightBlue;" />
+            <Label fx:id="base3Gul" layoutX="475.0" layoutY="618.0" maxHeight="40.0" maxWidth="40.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: lightBlue;" />
             <Label fx:id="tarningRes" layoutX="853.0" layoutY="867.0" prefHeight="68.0" prefWidth="76.0" style="-fx-background-color: white;" text="6" textAlignment="CENTER">
                <font>
                   <Font size="36.0" />
@@ -177,6 +177,10 @@
             </Label>
             <Button fx:id="startKnapp" layoutX="174.0" layoutY="482.0" mnemonicParsing="false" onAction="#startSpill" prefHeight="68.0" prefWidth="76.0" text="start" />
             <TextField fx:id="numSpillere" layoutX="170.0" layoutY="442.0" prefHeight="26.0" prefWidth="83.0" />
+            <Label fx:id="q106" layoutX="705.0" layoutY="510.0" maxHeight="40.0" maxWidth="40.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: lightBlue;" />
+            <Label fx:id="q206" layoutX="650.0" layoutY="452.0" maxHeight="40.0" maxWidth="40.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: pink;" />
+            <Label fx:id="q306" layoutX="708.0" layoutY="398.0" maxHeight="40.0" maxWidth="40.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: lightGreen;" />
+            <Label fx:id="q406" layoutX="760.0" layoutY="453.0" maxHeight="40.0" maxWidth="40.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: yellow;" />
          </children>
       </AnchorPane>
    </children>

@@ -177,6 +177,7 @@
             </Label>
             <Button fx:id="startKnapp" layoutX="212.0" layoutY="516.0" mnemonicParsing="false" onAction="#startSpill" prefHeight="68.0" prefWidth="76.0" text="start" />
             <TextField fx:id="nuMSpillere" layoutX="170.0" layoutY="442.0" prefHeight="26.0" prefWidth="83.0" />
+            <ImageView fx:id="asasas" fitHeight="150.0" fitWidth="200.0" layoutX="132.0" layoutY="60.0" pickOnBounds="true" preserveRatio="true" />
          </children>
       </AnchorPane>
    </children>
