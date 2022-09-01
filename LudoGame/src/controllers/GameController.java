@@ -2,12 +2,19 @@ package controllers;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 import objects.Board;
 import objects.Piece;
 import objects.Player;
+
+import java.io.IOException;
+
 import enums.Color;
 
 public class GameController {
@@ -257,7 +264,7 @@ public class GameController {
     private int gamePlayers;
     private Board game;
     
-    
+    public static Color colorWinner = null;
     
     
     
@@ -267,24 +274,28 @@ public class GameController {
 
     @FXML
     void flyttB1(ActionEvent event) {
+    	checkVictory();
     	game.move(1);
     	updateBoard();
     }
 
     @FXML
     void flyttB2(ActionEvent event) {
+    	checkVictory();
     	game.move(2);
     	updateBoard();
     }
 
     @FXML
     void flyttB3(ActionEvent event) {
+    	checkVictory();
     	game.move(3);
     	updateBoard();
     }
 
     @FXML
     void flyttB4(ActionEvent event) {
+    	checkVictory();
     	game.move(4);
     	updateBoard();
     }
@@ -547,6 +558,17 @@ public class GameController {
 		q29.setText("");
 		q30.setText("");
 		
+		q31.setText("");
+		q32.setText("");
+		q33.setText("");
+		q34.setText("");
+		q35.setText("");
+		q36.setText("");
+		q37.setText("");
+		q38.setText("");
+		q39.setText("");
+		q40.setText("");
+		
 		q41.setText("");
 		q42.setText("");
 		q43.setText("");
@@ -589,7 +611,27 @@ public class GameController {
 		q405.setText("");
 		q406.setText("");
 		
-		
+	}
+	
+	public void checkVictory() {
+		if(game.checkVictory() != null) {
+			Player player = game.checkVictory();
+			colorWinner = player.getColor();
+			
+			q1.getScene().getWindow().hide();;
+			Stage winner = new Stage();
+			Parent root = null;
+			try {
+				root = FXMLLoader.load(getClass().getResource("/FXML/winner.fxml"));
+			} catch(IOException e) {
+				e.printStackTrace();
+			}
+			Scene scene = new Scene(root);
+			winner.setScene(scene);
+			winner.show();
+			winner.setResizable(false);		
+			
+		}
 	}
 
 }

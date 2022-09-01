@@ -28,6 +28,8 @@ public class Board {
 	private boolean firstRollDice = true;
 	private boolean canMoveOut = false;
 	private LinkedList<Piece> pieces = new LinkedList<>();
+	private boolean movedAfterDiceRoll = true;
+	private boolean haveRolledDice = false;
 	
 	
 	public Board(int numPlayers) {
@@ -86,17 +88,19 @@ public class Board {
 	}
 	
 	public void rollDice() {
+		updateBoard();
 		
 		if(dice == 6) {
 			canRollDice = true;
-		}
-		else {
+		} else {
 			canRollDice = false;
 		}
 		
-		if(canRollDice == true || firstRollDice == true) {
+		if((canRollDice == true || firstRollDice == true) && movedAfterDiceRoll) {
+			movedAfterDiceRoll = false;
 			dice = (int) (Math.random() * 6 + 1);
 			System.out.println("Dice rolled: " + dice + "\n");
+			haveRolledDice = true;
 			if(dice == 6)
 				canMoveOut = true;
 		} else {
@@ -104,9 +108,15 @@ public class Board {
 		}
 		firstRollDice = false;
 		
+		if(dice != 6 && playerInPlay.getPiecesOutside() == 0)
+			nextPlayer();
+		
 	}
 	
 	public void nextPlayer() {
+		haveRolledDice = false;
+		movedAfterDiceRoll = true;
+		
 		Player temp = gameQueue.remove();
 		playerInPlay = gameQueue.peek();
 		gameQueue.add(temp);
@@ -221,17 +231,26 @@ public class Board {
 	 * The method move() and moveOut() are created in the class Player
 	 * And here they are added some more restrictions to make the game flow better.
 	 */
-	public void move(int piece) {
+	public void move(int piece) {		
 		boolean nexttt = false;
+		
+		if(!haveRolledDice) {
+			System.out.println("You have to roll the dice first!!!");
+			return;
+		}
 		
 		if(dice == 6 && playerInPlay.getPiece(piece).getPosition() != -1) {
 			System.out.println("You can roll the dice again!" + "\n");
-			playerInPlay.movePiece(dice, piece);
+			playerInPlay.movePiece(piece, dice);
+			movedAfterDiceRoll = true;
+			haveRolledDice = false;
 		} else if(playerInPlay.getPiece(piece).getPosition() == -1) {
 			System.out.println(playerInPlay.getColor() + " " + piece + " This piece is still inside!");
 		} else {
 			playerInPlay.movePiece(piece, dice);
 			nexttt = true;
+			movedAfterDiceRoll = true;
+			haveRolledDice = false;
 		}
 		
 		if(playerInPlay.getPiece(piece).getPosition() != -1) {
@@ -278,7 +297,10 @@ public class Board {
 	}
 	
 	public void moveOut() {
+// 		haveRolledDice = false;
+		
 		if(dice == 6 && playerInPlay.getPiecesOutside() < 4 && canMoveOut) {
+			movedAfterDiceRoll = true;
 			canMoveOut = false;
 			System.out.println("You can roll the dice again!" + "\n");
 			playerInPlay.pieceOut();
@@ -396,6 +418,20 @@ public class Board {
 		case 4: return player4;
 		default: return null;
 		}
+	}
+	
+	public Player checkVictory() {
+		if(player1 != null && player1.checkVictory())
+			return player1;
+		else if(player2 != null && player2.checkVictory())
+			return player2;
+		else if(player3 != null && player3.checkVictory())
+			return player3;
+		else if(player4 != null && player4.checkVictory())
+			return player4;
+		
+		return null;
+			
 	}
 
 }

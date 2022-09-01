@@ -51,7 +51,7 @@
       <Label layoutX="387.0" layoutY="411.0" maxHeight="40.0" maxWidth="40.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: white;" />
       <Label layoutX="387.0" layoutY="452.0" maxHeight="40.0" maxWidth="40.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: white;" />
       <Label layoutX="387.0" layoutY="496.0" maxHeight="40.0" maxWidth="40.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: white;" />
-      <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="1000.0" prefWidth="1500.0" style="-fx-background-color: grey;">
+      <AnchorPane layoutX="-5.0" layoutY="-26.0" prefHeight="1000.0" prefWidth="1500.0" style="-fx-background-color: grey;">
          <children>
             <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="650.0" layoutY="397.0" pickOnBounds="true" preserveRatio="true" />
             <Label fx:id="q105" layoutX="705.0" layoutY="554.0" maxHeight="40.0" maxWidth="40.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: lightBlue;" />

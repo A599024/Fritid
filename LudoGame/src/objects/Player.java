@@ -138,9 +138,9 @@ public class Player {
 						piece2.setPosition(num5);
 					else if(pos == (startVal + 50 + 6) || pos == num6)
 					{
-						piece1.setPosition(num6);
-						piecesFinished.add(piece1);
-						System.out.println(color + " piece 1 inside!");
+						piece2.setPosition(num6);
+						piecesFinished.add(piece2);
+						System.out.println(color + " piece 2 inside!");
 						checkVictory();
 					} else {
 						System.out.println("Piece 2 cant be moved, it will go over the finishline.");
@@ -175,12 +175,12 @@ public class Player {
 						piece3.setPosition(num5);
 					else if(pos == (startVal + 50 + 6) || pos == num6)
 					{
-						piece1.setPosition(num6);
-						piecesFinished.add(piece1);
-						System.out.println(color + " piece 1 inside!");
+						piece3.setPosition(num6);
+						piecesFinished.add(piece3);
+						System.out.println(color + " piece 3 inside!");
 						checkVictory();
 					} else {
-						System.out.println("Piece 2 cant be moved, it will go over the finishline.");
+						System.out.println("Piece 3 cant be moved, it will go over the finishline.");
 					}
 					
 				} else if(piece3.getPosition() + dice > -1 && piece3.getPosition() + dice <= (startVal + 50)) {
@@ -212,12 +212,12 @@ public class Player {
 						piece4.setPosition(num5);
 					else if(pos == (startVal + 50 + 6) || pos == num6)
 					{
-						piece1.setPosition(num6);
-						piecesFinished.add(piece1);
-						System.out.println(color + " piece 1 inside!");
+						piece4.setPosition(num6);
+						piecesFinished.add(piece4);
+						System.out.println(color + " piece 4 inside!");
 						checkVictory();
 					} else {
-						System.out.println("Piece 2 cant be moved, it will go over the finishline.");
+						System.out.println("Piece 4 cant be moved, it will go over the finishline.");
 					}
 					
 				} else if(piece4.getPosition() + dice > -1 && piece4.getPosition() + dice <= (startVal + 50)) {
@@ -227,13 +227,16 @@ public class Player {
 				
 			}
 			
-		}		
+		}
+		
 	}
 	
-	private void checkVictory() {
+	public boolean checkVictory() {
 		if(piecesFinished.size() == 4) {
 			System.out.println(color + " HAVE WON THE GAME!!!!!");
+			return true;
 		}
+		return false;
 		
 	}
 

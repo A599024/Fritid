@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane minHeight="450.0" minWidth="650.0" onMouseMoved="#mouseOver" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17" fx:controller="winnerController">
+   <children>
+      <ImageView fitHeight="220.0" fitWidth="337.0" layoutX="157.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../Winner-Winner-Chicken-Dinner_280x183.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="winnerLabel" layoutX="178.0" layoutY="282.0" prefHeight="102.0" prefWidth="295.0" text="BLUE won" textAlignment="CENTER" textFill="#c7493e" textOverrun="CENTER_ELLIPSIS">
+         <font>
+            <Font name="Farisi Regular" size="44.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
